@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.3]
+
+### Changed
+- CI: uv is pointed at the interpreter from setup-python (`UV_PYTHON`, no interpreter downloads), steps run with `bash -eo pipefail`, every step keeps its output, and a final step always writes the step results, the versions and the last 60 lines of a failing step to the job summary.
+
 ## [0.1.2]
 
 ### Changed
@@ -26,6 +31,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - 94-case corpus, a lenient markdown-it-py judge and `bench/compare.py` comparing mathfence with no processing, escaping every `$` and a typical regex recipe.
 - Streamlit replay example in `examples/streamlit_chat.py`.
 
+[Unreleased]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.2...HEAD
 [0.1.2]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/LeeGyeongPil/mathfence/releases/tag/v0.1.0

@@ -8,7 +8,7 @@
 from .core import PROFILES, Decision, Result, analyze, normalize
 from .stream import StreamNormalizer, StreamStats
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 __all__ = [
     "PROFILES",

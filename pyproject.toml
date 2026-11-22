@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mathfence"
-version = "0.1.2"
+version = "0.1.3"
 description = "Normalize LLM math delimiters and escape currency dollar signs before Markdown rendering, without touching code or URLs."
 readme = "README.md"
 license = { text = "MIT" }
