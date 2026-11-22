@@ -1,0 +1,18 @@
+{
+ "sentences": [
+  "Pay $5 if $x>5$ holds, else \\(y\\) and done.",
+  "Area:\n\n\\[\n\\int_0^1 x\\,dx\n\\]\n\nThen `$5` costs $5 and $10.",
+  "The answer is $5x = 10$ so x is 2 and it costs $5.",
+  "Between $5 and$10 exactly, then $a$ and $b$ follow.",
+  "Run:\n\n```bash\necho $HOME $5\n```\n\nThen $x^2$ is fine and $7 is a price.",
+  "- Basic: $9\n- Formula: $a+b$\n- Euler: \\(e^{i\\pi}+1=0\\)\n\nDone.",
+  "Use `echo $5 and $x$` for tests, then pay $6 or $y$.",
+  "가격은 $5이고 수식은 $x^2$ 이다. 합은 \\(a+b\\) 입니다.",
+  "See https://example.com/p?x=$5 for $x$ and $$a+b$$ too."
+ ],
+ "long": {
+  "paragraph": "The plan costs $5 per seat, but the cluster fee is $1,200 and the loss is $L=\\sum_i x_i^2$ for \\(n\\) nodes. Run `echo $HOME` first.\n\n",
+  "target_chars": 30000,
+  "chunks": 200
+ }
+}

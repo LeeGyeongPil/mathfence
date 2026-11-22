@@ -1,0 +1,707 @@
+{
+ "cases": [
+  {
+   "id": "cur-two",
+   "src": "It costs $5 and $10 per month.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-range",
+   "src": "Prices went from $5 to $10 today.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-comma",
+   "src": "The laptop is $1,299 or $1.5M for the fleet.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-dash",
+   "src": "Budget: $100-$200 range.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-slash",
+   "src": "Plans are $5/month or $50/year.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-k",
+   "src": "Salaries between $10k and $20k.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-paren",
+   "src": "It costs $5 (approximately $4.50 after tax).",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-three",
+   "src": "Tiers: $20 $30 $40.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-sum",
+   "src": "Total: $5+$3=$8 overall.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-ko",
+   "src": "가격은 $5에서 $10으로 올랐다.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-ko2",
+   "src": "$1,000과 $2,000 사이입니다.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-escaped",
+   "src": "Already escaped \\$5 and \\$10.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-nospace",
+   "src": "Between $5 and$10 exactly.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-sentence",
+   "src": "I paid $5.They paid $6 later.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-list",
+   "src": "- Basic: $9\n- Pro: $19\n- Team: $49",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-table",
+   "src": "| plan | price |\n|---|---|\n| a | $5 |\n| b | $10 |",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-bold",
+   "src": "Save **$5** now, was **$10**.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "cur-word-between",
+   "src": "From $5 to $10 is a $5 increase.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "math-simple",
+   "src": "Solve $2x+1=5$ for x.",
+   "expect": [
+    "2x+1=5"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "math-digit-start",
+   "src": "We know $5x = 10$, so x is 2.",
+   "expect": [
+    "5x = 10"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "math-pow",
+   "src": "About $10^6$ users signed up.",
+   "expect": [
+    "10^6"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "math-root",
+   "src": "The roots are $1$ and $2$.",
+   "expect": [
+    "1",
+    "2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "math-greek",
+   "src": "Let $\\alpha$ be the rate.",
+   "expect": [
+    "\\alpha"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "math-two",
+   "src": "The sum $\\sum_{i=1}^n i$ equals $n(n+1)/2$.",
+   "expect": [
+    "\\sum_{i=1}^n i",
+    "n(n+1)/2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-1",
+   "src": "Pay $5 if $x>5$ holds.",
+   "expect": [
+    "x>5"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-2",
+   "src": "The cost $C$ is $100 per unit.",
+   "expect": [
+    "C"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-3",
+   "src": "Revenue was $3.2 billion and margin is $m$.",
+   "expect": [
+    "m"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-4",
+   "src": "$a$ costs $5 and $b$ costs $6.",
+   "expect": [
+    "a",
+    "b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-5",
+   "src": "Between $5 and $10 per \\(n\\) items.",
+   "expect": [
+    "n"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "mix-ko",
+   "src": "가격은 $5이고 수식은 $x^2$ 이다.",
+   "expect": [
+    "x^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-inline",
+   "src": "Euler: \\(e^{i\\pi}+1=0\\) holds.",
+   "expect": [
+    "e^{i\\pi}+1=0"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-display",
+   "src": "Area:\n\n\\[\n\\int_0^1 x\\,dx = \\tfrac12\n\\]\n\nDone.",
+   "expect": [
+    "\\int_0^1 x\\,dx = \\tfrac12"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-list",
+   "src": "1. First step:\n   \\[\n   a^2+b^2=c^2\n   \\]\n2. Next",
+   "expect": [
+    "a^2+b^2=c^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "display-dollar",
+   "src": "$$\nE=mc^2\n$$",
+   "expect": [
+    "E=mc^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "code-span",
+   "src": "Use `$HOME` and `\\(x\\)` and `$5` in shell.",
+   "expect": [],
+   "verbatim": [
+    "$HOME",
+    "\\(x\\)",
+    "$5"
+   ]
+  },
+  {
+   "id": "code-fence",
+   "src": "```bash\necho \"$1 costs $5\"\nprintf \"\\(x\\)\"\n```\nThen $x$.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": [
+    "echo \"$1 costs $5\"\nprintf \"\\(x\\)\""
+   ]
+  },
+  {
+   "id": "code-tilde",
+   "src": "~~~\nprice=$5; echo $price\n~~~",
+   "expect": [],
+   "verbatim": [
+    "price=$5; echo $price"
+   ]
+  },
+  {
+   "id": "code-indented",
+   "src": "Example:\n\n    total=$5 + $10\n\nend",
+   "expect": [],
+   "verbatim": [
+    "total=$5 + $10"
+   ]
+  },
+  {
+   "id": "autolink",
+   "src": "See <https://example.com/?a=$5&b=$6> for prices.",
+   "expect": [],
+   "verbatim": [
+    "https://example.com/?a=$5&b=$6"
+   ]
+  },
+  {
+   "id": "gfm-autolink",
+   "src": "See https://example.com/p?x=$5 today.",
+   "expect": [],
+   "verbatim": [
+    "https://example.com/p?x=$5"
+   ]
+  },
+  {
+   "id": "link-text",
+   "src": "[$5 deal](https://example.com) and [$10 deal](https://example.com/b)",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "html-inline",
+   "src": "Price <b>$5</b> and <i>$10</i>.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "escaped-bracket",
+   "src": "Literal \\\\(not math\\\\) here.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-vs",
+   "src": "Cheap at $5 vs. $x$ dollars.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-question",
+   "src": "Is it $5? Or is it $x$?",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-comma-after",
+   "src": "It costs $5, and $x$ is the count.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-end",
+   "src": "The total is $5.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-alone",
+   "src": "$5",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-math-then-cur",
+   "src": "If $x=2$ then pay $5 and $6 later.",
+   "expect": [
+    "x=2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-ko-two-math",
+   "src": "$x$와 $y$의 합은 $x+y$이다.",
+   "expect": [
+    "x",
+    "y",
+    "x+y"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-ko-cur-math",
+   "src": "사과는 $3이고 배는 $4인데, 합은 $a+b$이다.",
+   "expect": [
+    "a+b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-cur-closing-word",
+   "src": "Spend $5 on the x$ token.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-math-space-inside",
+   "src": "Then $ x + y $ is fine.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-cur-suffix",
+   "src": "It is 5$ or 10$ in some locales.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-math-digits-only",
+   "src": "So $2+2=4$ and $3$ too.",
+   "expect": [
+    "2+2=4",
+    "3"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-dd-currency",
+   "src": "Pay $$5 or $$10 tip.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-frac-currency",
+   "src": "Unit price $\\frac{5}{2}$ vs $5 flat.",
+   "expect": [
+    "\\frac{5}{2}"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-bracket-nested-cur",
+   "src": "Cost \\(c = \\$5\\) per item.",
+   "expect": [
+    "c = \\$5"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-display-inline-text",
+   "src": "We get \\[x^2\\] inline here.",
+   "expect": [
+    "x^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-display-list-dollar",
+   "src": "- Step:\n  $$\n  y=mx+b\n  $$",
+   "expect": [
+    "y=mx+b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-mixed-paren-price",
+   "src": "Option A ($5) or B ($10).",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-percent",
+   "src": "Grew from $5M to $7.5M (50%).",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-cur-newline-math",
+   "src": "Costs $5\nand $x$ next line.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-katex-env",
+   "src": "$$\\begin{aligned}a&=1\\\\b&=2\\end{aligned}$$",
+   "expect": [
+    "\\begin{aligned}a&=1\\\\b&=2\\end{aligned}"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "h-heading",
+   "src": "## Plans from $5 to $10",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-blockquote",
+   "src": "> The fee is $5 and the rebate is $2.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "h-bracket-blockquote",
+   "src": "> \\[\n> a+b\n> \\]",
+   "expect": [
+    "a+b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "list-dollar-math",
+   "src": "- Cost: $5\n- Formula: $a+b$",
+   "expect": [
+    "a+b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "html-block",
+   "src": "<div>\nPrice $5 and \\(x\\)\n</div>\n\nAfter $y$.",
+   "expect": [
+    "y"
+   ],
+   "verbatim": [
+    "<div>\nPrice $5 and \\(x\\)\n</div>"
+   ]
+  },
+  {
+   "id": "tab-indent",
+   "src": "Example:\n\n\ttotal=$5 + $10\n\nend",
+   "expect": [],
+   "verbatim": [
+    "\ttotal=$5 + $10"
+   ]
+  },
+  {
+   "id": "ko-price-area",
+   "src": "총액은 $100이고 면적은 \\(\\pi r^2\\) 입니다.",
+   "expect": [
+    "\\pi r^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-escaped-dollar",
+   "src": "Use \\[ x = \\$5 + y \\] here.",
+   "expect": [
+    "x = \\$5 + y"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "nested-quote-inline",
+   "src": "> > \\(a+b\\)\n> > text",
+   "expect": [
+    "a+b"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "quote-display-multi",
+   "src": "> Result:\n> \\[\n> x^2+y^2=1\n> \\]",
+   "expect": [
+    "x^2+y^2=1"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "list-bracket-then-price",
+   "src": "- item\n  \\[\n  z=1\n  \\]\n- next $5",
+   "expect": [
+    "z=1"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "unclosed-fence",
+   "src": "Run:\n\n```bash\nexport COST=$5\necho \\(x\\)",
+   "expect": [],
+   "verbatim": [
+    "export COST=$5\necho \\(x\\)"
+   ]
+  },
+  {
+   "id": "code-span-double-tick",
+   "src": "Use ``echo $5 `x` $6`` then pay $7.",
+   "expect": [],
+   "verbatim": [
+    "``echo $5 `x` $6``"
+   ]
+  },
+  {
+   "id": "fence-in-list",
+   "src": "1. Step:\n   ```\n   echo $5\n   ```\n2. Pay $x$.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": [
+    "   echo $5"
+   ]
+  },
+  {
+   "id": "fence-in-quote",
+   "src": "> ```\n> echo $HOME $5\n> ```",
+   "expect": [],
+   "verbatim": [
+    "> echo $HOME $5"
+   ]
+  },
+  {
+   "id": "bare-url-dollar",
+   "src": "Docs: https://example.com/a?cost=$5 end $7.",
+   "expect": [],
+   "verbatim": [
+    "https://example.com/a?cost=$5"
+   ]
+  },
+  {
+   "id": "html-attr",
+   "src": "<a href=\"https://x.y/?p=$5\">Buy at $5</a>",
+   "expect": [],
+   "verbatim": [
+    "<a href=\"https://x.y/?p=$5\">"
+   ]
+  },
+  {
+   "id": "escaped-backslash-paren",
+   "src": "Write \\\\(x\\\\) literally and $y$.",
+   "expect": [
+    "y"
+   ],
+   "verbatim": [
+    "\\\\(x\\\\)"
+   ]
+  },
+  {
+   "id": "double-currency-two",
+   "src": "Total $$100 plus $$20 tax.",
+   "expect": [],
+   "verbatim": []
+  },
+  {
+   "id": "double-inline-math",
+   "src": "Then $$x^2+y^2$$ follows.",
+   "expect": [
+    "x^2+y^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "ko-frac-price",
+   "src": "삼각형의 넓이는 \\(\\frac{1}{2}ab\\)이고 가격은 $20, 할인은 $5입니다.",
+   "expect": [
+    "\\frac{1}{2}ab"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "three-paragraphs",
+   "src": "First $5 here.\n\nSecond $x$ there.\n\nThird $6.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "table-math",
+   "src": "| expr | price |\n|---|---|\n| $x^2$ | $5 |\n| $y$ | $6 |",
+   "expect": [
+    "x^2",
+    "y"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "heading-math",
+   "src": "## Area $\\pi r^2$ and $5 fee",
+   "expect": [
+    "\\pi r^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bold-note-math",
+   "src": "**Note:** $x$ is $5 at most.",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "sentence-then-math",
+   "src": "The price is $5 for the item, and the area is $\\pi r^2$ square units.",
+   "expect": [
+    "\\pi r^2"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-digit-body",
+   "src": "Cost \\(5\\) dollars",
+   "expect": [
+    "5"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "bracket-before-digit",
+   "src": "Final: \\(x\\)5",
+   "expect": [
+    "x"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "text-command-math",
+   "src": "We have $\\text{if } x > 0$ then.",
+   "expect": [
+    "\\text{if } x > 0"
+   ],
+   "verbatim": []
+  },
+  {
+   "id": "large-amounts",
+   "src": "Funding of $2.5 billion and $300 million.",
+   "expect": [],
+   "verbatim": []
+  }
+ ]
+}
