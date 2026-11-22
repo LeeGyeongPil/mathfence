@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Same answer, same renderer</title><style>
+body{font:17px/1.55 system-ui,sans-serif;margin:24px;color:#1f2328;background:#fff}
+h1{font-size:22px;margin:0 0 14px}
+.row{display:flex;gap:20px}
+.card{flex:1;border:1px solid #d0d7de;border-radius:8px;padding:14px 18px}
+.card h2{font-size:16px;margin:0 0 6px}
+.off h2{color:#cf222e}.on h2{color:#1a7f37}
+.note{font-size:14px;color:#57606a;margin:0 0 10px}
+.math{font-style:italic;background:#ddf4ff;border:1px solid #54aeff;border-radius:4px;padding:0 4px}
+code{background:#eaeef2;border-radius:4px;padding:0 4px}
+.legend{font-size:14px;color:#57606a;margin-top:12px}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #d0d7de;padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-size:14px}
+td.n{width:90px;color:#57606a}
+</style></head><body><h1>Same answer, same renderer</h1><div class='row'><div class='card off'><h2>mathfence OFF</h2><p class='note'>Prices got paired into formulas (highlighted boxes); the bracket math stays as plain text.</p><p>The plan costs <span class="math">5 per seat and the cluster fee is </span>1,200, so the total is <span class="math">5n + </span>1,200.</p>
+<p>With (n) seats the cost per seat is <span class="math">x = 5 + 1200/n</span>.</p>
+<p>Shell users can check it with <code>echo $HOME</code>.</p>
+</div><div class='card on'><h2>mathfence ON</h2><p class='note'>Prices stay text, real formulas are math, the code span is untouched.</p><p>The plan costs $5 per seat and the cluster fee is $1,200, so the total is $5n + $1,200.</p>
+<p>With <span class="math">n</span> seats the cost per seat is <span class="math">x = 5 + 1200/n</span>.</p>
+<p>Shell users can check it with <code>echo $HOME</code>.</p>
+</div></div><p class='legend'><span class='math'>x</span> Highlighted italic box = what the renderer treats as a formula</p></body></html>

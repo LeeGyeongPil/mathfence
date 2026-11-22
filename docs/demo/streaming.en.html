@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Streaming: what the screen shows after each chunk</title><style>
+body{font:17px/1.55 system-ui,sans-serif;margin:24px;color:#1f2328;background:#fff}
+h1{font-size:22px;margin:0 0 14px}
+.row{display:flex;gap:20px}
+.card{flex:1;border:1px solid #d0d7de;border-radius:8px;padding:14px 18px}
+.card h2{font-size:16px;margin:0 0 6px}
+.off h2{color:#cf222e}.on h2{color:#1a7f37}
+.note{font-size:14px;color:#57606a;margin:0 0 10px}
+.math{font-style:italic;background:#ddf4ff;border:1px solid #54aeff;border-radius:4px;padding:0 4px}
+code{background:#eaeef2;border-radius:4px;padding:0 4px}
+.legend{font-size:14px;color:#57606a;margin-top:12px}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #d0d7de;padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-size:14px}
+td.n{width:90px;color:#57606a}
+</style></head><body><h1>Streaming: what the screen shows after each chunk</h1><table><tr><th></th><th>raw text</th><th>with StreamNormalizer</th></tr><tr><td class='n'>chunk 1<br><code>The fee is $</code></td><td>The fee is $</td><td>The fee is $</td></tr><tr><td class='n'>chunk 2<br><code>5 and the tax is $</code></td><td>The fee is <span class="math">5 and the tax is </span></td><td>The fee is $5 and the tax is $</td></tr><tr><td class='n'>chunk 3<br><code>10, area $x</code></td><td>The fee is <span class="math">5 and the tax is </span>10, area $x</td><td>The fee is $5 and the tax is $10, area $x</td></tr><tr><td class='n'>chunk 4<br><code>^2$.</code></td><td>The fee is <span class="math">5 and the tax is </span>10, area <span class="math">x^2</span>.</td><td>The fee is $5 and the tax is $10, area <span class="math">x^2</span>.</td></tr></table><p class='legend'>Raw text flashes a fake formula as soon as a second $ arrives; the stream holds it back.<br><span class='math'>x</span> Highlighted italic box = what the renderer treats as a formula</p></body></html>
