@@ -1,0 +1,22 @@
+# Pure string processing: no keys, no network after the dependencies are installed.
+name: ci
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"   # every Monday - catches breakage from new parser releases
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv python install ${{ matrix.python }}
+      - run: uv sync --locked --python ${{ matrix.python }}
+      - run: uv run pytest -q
+      - run: uv run python bench/compare.py
