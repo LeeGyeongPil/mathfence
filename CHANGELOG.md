@@ -3,7 +3,11 @@
 All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.1.2]
+
+### Changed
+- CI: actions that run on Node 24 (`actions/checkout@v5`, `actions/setup-python@v6`), uv pinned to 0.13.9, read-only token, 15-minute job limit, a step that prints the Python and uv versions and the number of checked-out files, and no weekly schedule (dependencies are locked, so it only repeated the same run).
+- `uv run pytest -q` now ends with the `N passed` summary line (the extra `-q` in the pytest settings was removed).
 
 ## [0.1.1]
 
@@ -22,6 +26,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - 94-case corpus, a lenient markdown-it-py judge and `bench/compare.py` comparing mathfence with no processing, escaping every `$` and a typical regex recipe.
 - Streamlit replay example in `examples/streamlit_chat.py`.
 
-[Unreleased]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.1...HEAD
+[0.1.2]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/LeeGyeongPil/mathfence/releases/tag/v0.1.0
