@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mathfence"
+version = "0.1.0"
+description = "Normalize LLM math delimiters and escape currency dollar signs before Markdown rendering, without touching code or URLs."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "LeeGyeongPil" }]
+keywords = ["llm", "markdown", "latex", "katex", "streamlit", "gradio", "jupyter", "streaming", "math"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup :: Markdown",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/LeeGyeongPil/mathfence"
+Issues = "https://github.com/LeeGyeongPil/mathfence/issues"
+Changelog = "https://github.com/LeeGyeongPil/mathfence/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mathfence = "mathfence.cli:main"
+
+[dependency-groups]
+dev = [
+  "markdown-it-py==4.3.0",
+  "mdit-py-plugins==0.7.0",
+  "pytest>=8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mathfence"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["tests"]
