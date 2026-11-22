@@ -5,6 +5,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [Unreleased]
 
+## [0.1.1]
+
+### Fixed
+- CI: install uv with pip after setup-python and sync with `uv sync --locked`.
+
 ## [0.1.0]
 
 ### Added
@@ -17,5 +22,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - 94-case corpus, a lenient markdown-it-py judge and `bench/compare.py` comparing mathfence with no processing, escaping every `$` and a typical regex recipe.
 - Streamlit replay example in `examples/streamlit_chat.py`.
 
-[Unreleased]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/LeeGyeongPil/mathfence/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/LeeGyeongPil/mathfence/releases/tag/v0.1.0
